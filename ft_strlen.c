@@ -6,19 +6,18 @@
 /*   By: myrhamza <myrhamza@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 08:15:22 by myrhamza          #+#    #+#             */
-/*   Updated: 2026/11/03 08:17:06 by myrhamza         ###   ########.fr       */
+/*   Updated: 2026/11/20 09:46:19 by myrhamza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-size_t strlen (const char *str)
+size_t	ft_strlen(const char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 		i++;
-	return(i);
-
+	return (i);
 }

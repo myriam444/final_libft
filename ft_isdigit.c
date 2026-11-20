@@ -6,13 +6,15 @@
 /*   By: myrhamza <myrhamza@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 14:35:52 by myrhamza          #+#    #+#             */
-/*   Updated: 2026/11/03 07:48:13 by myrhamza         ###   ########.fr       */
+/*   Updated: 2026/11/20 09:21:04 by myrhamza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_isdigit(int c)
 {
-	if (i >= 48 && i <= 57)
-		return(TRUE);
-	return(FALSE);
+	if (c >= 48 && c <= 57)
+		return (TRUE);
+	return (FALSE);
 }

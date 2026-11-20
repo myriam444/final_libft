@@ -6,7 +6,7 @@
 /*   By: myrhamza <myrhamza@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 13:23:39 by myrhamza          #+#    #+#             */
-/*   Updated: 2026/11/17 21:06:02 by myrhamza         ###   ########.fr       */
+/*   Updated: 2026/11/20 09:59:22 by myrhamza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	if(!lst)
-		return(NULL);
-	t_list *last;
+	t_list	*last;
 
+	if (!lst)
+		return (NULL);
 	last = lst;
-	while(last->next != NULL)
+	while (last->next != NULL)
 	{
 		last = last->next;
 	}
-	return(last);
+	return (last);
 }

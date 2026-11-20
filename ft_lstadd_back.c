@@ -6,7 +6,7 @@
 /*   By: myrhamza <myrhamza@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 21:08:37 by myrhamza          #+#    #+#             */
-/*   Updated: 2026/11/17 21:11:08 by myrhamza         ###   ########.fr       */
+/*   Updated: 2026/11/20 08:57:53 by myrhamza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,13 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*temp;
 
-	if(!lst || !new)
-		return;
-	if(*lst == NULL)
+	if (!lst || !new)
+		return ;
+	if (*lst == NULL)
 	{
 		*lst = new;
-		return;
+		return ;
 	}
 	temp = ft_lstlast(*lst);
 	temp->next = new;
 }
-

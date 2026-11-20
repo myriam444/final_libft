@@ -6,16 +6,14 @@
 /*   By: myrhamza <myrhamza@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 13:18:48 by myrhamza          #+#    #+#             */
-/*   Updated: 2026/11/03 13:27:10 by myrhamza         ###   ########.fr       */
+/*   Updated: 2026/11/20 09:48:54 by myrhamza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <libft.h>
+#include "libft.h"
 
-int toupper(int c)
+int	ft_toupper(int c)
 {
 	if (!(c >= 'a' && c <= 'z'))
-		return(c);
+		return (c);
 	return (c -= 32);
 }
-
-

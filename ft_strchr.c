@@ -6,24 +6,26 @@
 /*   By: myrhamza <myrhamza@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 14:36:29 by myrhamza          #+#    #+#             */
-/*   Updated: 2026/11/12 13:38:15 by myrhamza         ###   ########.fr       */
+/*   Updated: 2026/11/20 09:51:24 by myrhamza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *strchr(const char *str, int c)
+#include "libft.h"
+
+char	*ft_strchr(const char *str, int c)
 {
-	int i;
-	int size;
+	int	i;
+	int	size;
 
 	i = 0;
 	if (!str)
-		return(NULL);
+		return (NULL);
 	size = ft_strlen(str);
-	while(i <= size)
+	while (i <= size)
 	{
-		if(str[i] == (char)c)
-			return((char *)&str[i]);
+		if (str[i] == (char)c)
+			return ((char *)&str[i]);
 		i++;
 	}
-	return(NULL);
+	return (NULL);
 }

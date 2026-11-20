@@ -6,19 +6,20 @@
 /*   By: myrhamza <myrhamza@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 09:01:12 by myrhamza          #+#    #+#             */
-/*   Updated: 2026/11/03 09:06:38 by myrhamza         ###   ########.fr       */
+/*   Updated: 2026/11/20 09:49:59 by myrhamza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void bzero(void *s, size_t n)
+
+void	ft_bzero(void *s, size_t n)
 {
-	int i;
+	size_t	i;
 
 	i = 0;
-	while(i < n)
+	while (i < n)
 	{
-		s[i] = '\0';
+		((unsigned char *)s)[i] = '\0';
 		i++;
 	}
 }

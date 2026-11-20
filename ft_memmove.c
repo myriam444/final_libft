@@ -6,25 +6,27 @@
 /*   By: myrhamza <myrhamza@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 09:36:48 by myrhamza          #+#    #+#             */
-/*   Updated: 2026/11/12 13:37:10 by myrhamza         ###   ########.fr       */
+/*   Updated: 2026/11/20 09:57:37 by myrhamza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void *memmove(void *dest, const void *src, size_t size)
+void	*ft_memmove(void *dest, const void *src, size_t size)
 {
-	size_t i;
+	size_t	i;
 
-	if(!dest && !src)
-		return(NULL);
-	if ((size_t)dest > ((size_t)src))
+	if (!dest && !src)
+		return (NULL);
+	if (size == 0)
+		return (dest);
+	if ((size_t)dest > (size_t)src)
 	{
-		i = size - 1;
-		while(i > 0)
+		i = size;
+		while (i > 0)
 		{
-			((unsigned char)*dest)[i] = ((unsigned char)*src)[i];
 			i--;
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 		}
 	}
 	else
@@ -32,9 +34,9 @@ void *memmove(void *dest, const void *src, size_t size)
 		i = 0;
 		while (i < size)
 		{
-			((unsigned char)*dest)[i] = ((unsigned char)*src)[i];
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 			i++;
 		}
 	}
-	return(dest);
+	return (dest);
 }

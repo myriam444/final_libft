@@ -6,7 +6,7 @@
 /*   By: myrhamza <myrhamza@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 14:02:54 by myrhamza          #+#    #+#             */
-/*   Updated: 2026/11/18 13:29:27 by myrhamza         ###   ########.fr       */
+/*   Updated: 2026/11/20 09:15:13 by myrhamza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
-		write((int fd), str[i], 1);
+		write(fd, &s[i], 1);
 		i++;
 	}
 }

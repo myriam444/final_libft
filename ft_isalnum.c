@@ -6,17 +6,15 @@
 /*   By: myrhamza <myrhamza@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 14:32:51 by myrhamza          #+#    #+#             */
-/*   Updated: 2026/11/03 07:47:30 by myrhamza         ###   ########.fr       */
+/*   Updated: 2026/11/20 09:36:35 by myrhamza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int isalnum(int i)
+int	ft_isalnum(int i)
 {
 	if ((i >= 65 && i <= 90) || (i >= 97 && i <= 122) || (i >= 48 && i <= 57))
-		return(TRUE);
-	return(FALSE);
-
+		return (TRUE);
+	return (FALSE);
 }
-

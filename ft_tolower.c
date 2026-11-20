@@ -6,15 +6,15 @@
 /*   By: myrhamza <myrhamza@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 13:27:33 by myrhamza          #+#    #+#             */
-/*   Updated: 2026/11/03 13:29:43 by myrhamza         ###   ########.fr       */
+/*   Updated: 2026/11/20 09:50:45 by myrhamza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int tolower(int c)
+int	ft_tolower(int c)
 {
-	if(!(c >= 'A' && c <= 'Z'))
-		return(c);
-	return(c += 32);
+	if (!(c >= 'A' && c <= 'Z'))
+		return (c);
+	return (c += 32);
 }

@@ -6,15 +6,15 @@
 /*   By: myrhamza <myrhamza@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 07:57:10 by myrhamza          #+#    #+#             */
-/*   Updated: 2026/11/03 07:59:17 by myrhamza         ###   ########.fr       */
+/*   Updated: 2026/11/20 10:00:55 by myrhamza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int isprint(int c)
+int	ft_isprint(int c)
 {
-	if(c >= 33 && c <= 126)
-		return(1);
-	return(0);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }
