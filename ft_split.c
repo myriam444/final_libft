@@ -18,6 +18,7 @@ static int	count_words(char const *s, char c)
 	int	count;
 
 	i = 0;
+	count = 0; // pas initialise
 	while (s[i])
 	{
 		if (s[i] != c && (i == 0 || s[i - 1] == c))
@@ -83,6 +84,6 @@ char	**ft_split(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 	}
-	tab[k] = NULL;
+	tab[k] = '\0';
 	return (tab);
 }
