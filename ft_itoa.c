@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int	ft_length(int n)
+static int	ft_length(long int n) //gestion via un long pour le int min
 {
 	int	length;
 
@@ -34,25 +34,27 @@ static int	ft_length(int n)
 
 char	*ft_itoa(int n)
 {
-	char	*result;
-	int		l;
+	char		*result;
+	int			l;
+	long int	nbr; //passage du n en nbr 
 
-	l = ft_length(n);
-	result = malloc(sizeof(char) * ft_length(n));
+	nbr = (long)n;
+	l = ft_length(nbr);
+	result = malloc(sizeof(char) * l + 1); //ajout du +1 sur le malloc
 	if (!result)
 		return (NULL);
-	result[l--] = '\0';
-	if (n < 0)
+	if (nbr == 0)
+		result[0] = '0';
+	if (nbr < 0)
 	{
-		n = -n;
+		nbr = -nbr;
 		result[0] = '-';
 	}
-	if (n == 0)
-		result[0] = '0';
-	while (n > 0)
+	result[l--] = '\0';
+	while (nbr > 0)
 	{
-		result[l] = (n % 10) + '0';
-		n = n / 10;
+		result[l] = (nbr % 10) + '0';
+		nbr = nbr / 10;
 		l--;
 	}
 	return (result);
