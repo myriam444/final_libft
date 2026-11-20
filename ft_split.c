@@ -71,10 +71,10 @@ char	**ft_split(char const *s, char c)
 		tab[k] = copie_word(&s[i], c);
 		if (!tab[k])
 		{
-			while (k > 0)
+			while (k >= 0)
 			{
-				k--;
 				free(tab[k]);
+				k--;
 			}
 			free(tab);
 			return (NULL);
