@@ -18,7 +18,8 @@ static int	ft_isset_start(const char *s1, const char *set)
 	int	j;
 
 	i = 0;
-	while (s1[i])
+	j = 0;
+	while (s1[i] && set[j])
 	{
 		j = 0;
 		while (set[j] && s1[i] != set[j])
@@ -30,13 +31,13 @@ static int	ft_isset_start(const char *s1, const char *set)
 	return (i);
 }
 
-static int	ft_isset_end(const char *s1, const char *set)
+static int	ft_isset_end(const char *s1, const char *set, int start)
 {
 	int	i;
 	int	j;
 
 	i = ft_strlen(s1) - 1;
-	while (i >= 0)
+	while (i > start)
 	{
 		j = 0;
 		while (set[j] && s1[i] != set[j])
@@ -50,7 +51,6 @@ static int	ft_isset_end(const char *s1, const char *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
 	int		j;
 	int		start;
 	int		end;
@@ -59,19 +59,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (NULL);
 	start = ft_isset_start(s1, set);
-	end = ft_isset_end(s1, set);
-	if (start > end)
+	if (s1[start] == '\0')
 		return (ft_strdup(""));
+	end = ft_isset_end(s1, set, start);
 	dest = malloc(sizeof(const char) * (end - start + 2));
 	if (!dest)
 		return (NULL);
-	i = start;
 	j = 0;
-	while (i <= end)
+	while (start <= end)
 	{
-		dest[j] = s1[i];
+		dest[j] = s1[start];
 		start++;
 		j++;
 	}
+	dest[j] = '\0';
 	return (dest);
 }
