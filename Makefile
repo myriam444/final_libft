@@ -33,14 +33,11 @@ all:		$(NAME)
 $(NAME):	$(OBJS)
 			ar rcs $(NAME) $(OBJS)
 
-bonus:		$(OBJSbonus) $(OBJS)
-			ar rcs $(NAME) $(OBJSbonus) $(OBJS)
-
 .c.o:
 		$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 clean:
-		$(RM) $(OBJS) $(OBJSbonus)
+		$(RM) $(OBJS)
 
 fclean:		clean
 		$(RM) $(NAME)
