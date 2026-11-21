@@ -50,14 +50,23 @@ static char	*copie_word(const char *str, char c)
 	return (words);
 }
 
+static void	*free_tab(char **tab, int k)
+{
+	while (k >= 0)
+	{
+		free(tab[k]);
+		k--;
+	}
+	free(tab);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		k;
 	char	**tab;
 
-	if (!s)
-		return (NULL);
 	tab = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!tab)
 		return (NULL);
@@ -71,15 +80,7 @@ char	**ft_split(char const *s, char c)
 			break ;
 		tab[k] = copie_word(&s[i], c);
 		if (!tab[k])
-		{
-			while (k >= 0)
-			{
-				free(tab[k]);
-				k--;
-			}
-			free(tab);
-			return (NULL);
-		}
+			return (free_tab(tab, k));
 		k++;
 		while (s[i] && s[i] != c)
 			i++;
